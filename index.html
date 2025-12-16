@@ -67,9 +67,53 @@
     <script src="js/heart.js"></script>
     <script src="js/matrix.js"></script>
     <div class="namebox" style="opacity: 0;">
-        <h1 style="font-family: 'Comic Sans MS', cursive, sans-serif;">Wuv U&#10084;&#65039;Bao Bao</h1>
+        <h1 style="font-family: 'Comic Sans MS', cursive, sans-serif;">Wuv U&#10084;&#65039;Nayla Azka'un Nisa</h1>
+    </div>
+    <!-- TAP TO PLAY -->
+    <div id="tap"
+      style="
+        position:fixed;
+        inset:0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#ff5ba5;
+        font-size:22px;
+        z-index:99999;
+        cursor:pointer;
+        background:rgba(0,0,0,0.6);
+      ">
+     Please Tap Anywhere ingaku 💖
     </div>
 
+    <audio id="bg-music" loop>
+      <source src="desember-nayla.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const tap = document.getElementById('tap');
+      const music = document.getElementById('bg-music');
+
+      tap.addEventListener('click', () => {
+        music.volume = 0.6;
+        music.play().catch(err => console.log(err));
+        tap.style.display = 'none';
+      });
+    </script>
+
+    <audio id="bg-music" loop>
+  <source src="desember-nayla.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function () {
+    const music = document.getElementById('bg-music');
+    music.volume = 0.6;
+    music.play();
+  }, { once: true });
+</script>
+
 </body>
+
 
 </html>
